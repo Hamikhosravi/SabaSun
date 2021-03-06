@@ -29,22 +29,22 @@ export default class SecondPage extends Component{
         return(
             <section className="wholeSecondPage Page">
                 <section className="secondPage">
-                    <div className="secondInside">
-                        <section className="photos">
-                            <ul className="grid">
-                                <li className="grid1"><img src={land01} alt=""/></li>
-                                <li className="grid2"><img src={land02} alt=""/></li>
-                                <li className="grid3"><img src={land03} alt=""/></li>
-                                <li className="grid4"><img src={land04} alt=""/></li>
-                                <li className="grid5"><img src={land05} alt=""/></li>
-                                <li className="grid6"><img src={land06} alt=""/></li>
-                                <li className="grid7"><img src={land07} alt=""/></li>
-                                <li className="grid8"><img src={land08} alt=""/></li>
-                            </ul>
-                        </section>
-                        <div className="whiteCover"> </div>
-                        <p className="showButton">مشاهده باقی پست ها</p>
-                    </div>
+                    {/*<div className="secondInside">*/}
+                    {/*    <section className="photos">*/}
+                    {/*        <ul className="grid">*/}
+                    {/*            <li className="grid1"><img src={land01} alt=""/></li>*/}
+                    {/*            <li className="grid2"><img src={land02} alt=""/></li>*/}
+                    {/*            <li className="grid3"><img src={land03} alt=""/></li>*/}
+                    {/*            <li className="grid4"><img src={land04} alt=""/></li>*/}
+                    {/*            <li className="grid5"><img src={land05} alt=""/></li>*/}
+                    {/*            <li className="grid6"><img src={land06} alt=""/></li>*/}
+                    {/*            <li className="grid7"><img src={land07} alt=""/></li>*/}
+                    {/*            <li className="grid8"><img src={land08} alt=""/></li>*/}
+                    {/*        </ul>*/}
+                    {/*    </section>*/}
+                    {/*    <div className="whiteCover"> </div>*/}
+                    {/*    <p className="showButton">مشاهده باقی پست ها</p>*/}
+                    {/*</div>*/}
                 </section>
             </section>
         )

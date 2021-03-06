@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import logo1 from "../Image/MakarehLogo1080x360.png";
+import logo1 from "../Image/Logo.png";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faSearch, faUser} from "@fortawesome/free-solid-svg-icons";
 import $ from "jquery";
@@ -12,6 +12,17 @@ export default class Header extends Component{
     }
 
     componentDidMount() {
+
+        $('.header ul>li').hover(function(){
+            $('.HeaderUnderline').removeClass('noHover');
+            $('.HeaderUnderline').width($(this).width()+20);
+            let headerPosition = $(this).offset().left - $(this).parent().offset().left;
+            $('.HeaderUnderline').css('left', headerPosition + 'px');
+        }, function(){
+            $('.HeaderUnderline').addClass('noHover');
+        })
+
+
         $('.mainPage, .header>.logo>img').click(function (){
             $('.continue').fadeIn(0);
             $('.foot').fadeOut(0);
@@ -65,6 +76,7 @@ export default class Header extends Component{
                         <li className="postha">پست ها</li>
                         <li>تماس با ما</li>
                         <li className="darbareMa">درباره ما</li>
+                        <li className="HeaderUnderline"> </li>
                     </ul>
                 </nav>
                 <section className="profileSearch">

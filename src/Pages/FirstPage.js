@@ -37,16 +37,16 @@ export default class FirstPage extends Component{
         return(
             <section className="wholeFirstPage Page">
                 <section className="firstPage">
-                    <div className="firstInside">
-                        <section className="slider">
-                            <img src={slider01} alt="" className="firstPageSliderPhoto"/>
-                            <ul className="sliderButtons">
-                                <li><img src={slider01} alt=""/></li>
-                                <li><img src={slider02} alt=""/></li>
-                                <li><img src={slider03} alt=""/></li>
-                            </ul>
-                        </section>
-                    </div>
+                    {/*<div className="firstInside">*/}
+                    {/*    <section className="slider">*/}
+                    {/*        <img src={slider01} alt="" className="firstPageSliderPhoto"/>*/}
+                    {/*        <ul className="sliderButtons">*/}
+                    {/*            <li><img src={slider01} alt=""/></li>*/}
+                    {/*            <li><img src={slider02} alt=""/></li>*/}
+                    {/*            <li><img src={slider03} alt=""/></li>*/}
+                    {/*        </ul>*/}
+                    {/*    </section>*/}
+                    {/*</div>*/}
                 </section>
             </section>
         )

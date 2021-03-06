@@ -22,22 +22,22 @@ export default class ThirdPage extends Component{
         return(
             <section className="wholeThirdPage Page">
                 <section className="thirdPage">
-                    <div className="thirdInside">
-                        <h3 className="thirdHeader">آموزش کار با مکاره</h3>
-                        <section className="video">
-                            <div className="videos">
-                                <ul>
-                                    <li><video src={video1}> </video> </li>
-                                    <li><video src={video2}> </video> </li>
-                                    <li><video src={video3}> </video> </li>
-                                    <li><video src={video4}> </video> </li>
-                                </ul>
-                            </div>
-                            <div className="videoDisplay">
-                                <video src={video1} controls > </video>
-                            </div>
-                        </section>
-                    </div>
+                    {/*<div className="thirdInside">*/}
+                    {/*    <h3 className="thirdHeader">آموزش کار با مکاره</h3>*/}
+                    {/*    <section className="video">*/}
+                    {/*        <div className="videos">*/}
+                    {/*            <ul>*/}
+                    {/*                <li><video src={video1}> </video> </li>*/}
+                    {/*                <li><video src={video2}> </video> </li>*/}
+                    {/*                <li><video src={video3}> </video> </li>*/}
+                    {/*                <li><video src={video4}> </video> </li>*/}
+                    {/*            </ul>*/}
+                    {/*        </div>*/}
+                    {/*        <div className="videoDisplay">*/}
+                    {/*            <video src={video1} controls > </video>*/}
+                    {/*        </div>*/}
+                    {/*    </section>*/}
+                    {/*</div>*/}
                 </section>
             </section>
         )
