@@ -79,8 +79,16 @@ body{
   background: none;
 }
 
-.heightIncrement{
-  height: 100vh !important;
+/*.heightIncrement{*/
+/*  height: 100vh !important;*/
+/*}*/
+
+.heightReduction {
+  height: 0 !important;
+}
+
+.heightReductionHalf{
+  height: calc(100vh - 480px) !important;
 }
 
 

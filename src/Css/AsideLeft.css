@@ -1,0 +1,68 @@
+.leftAside {
+    position: fixed;
+    left: 5%;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    z-index: 200;
+}
+
+.leftAside > aside {
+    position: unset;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.social {
+    /*position: absolute;*/
+    /*bottom: 0;*/
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    /*border:1px solid aqua;*/
+}
+
+.social a {
+    width: 40px;
+    height: 150px;
+    border: 1px solid gray;
+    margin: 6px 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    /*box-shadow: 1px 1px 5px gray;*/
+    transition: 0.2s;
+    position: relative;
+    border-radius: 5px;
+    /*transform: rotate(-90deg);*/
+}
+
+.social a:hover {
+    box-shadow: 1px 1px 5px #5a5a5a;
+}
+
+.social a:before{
+    content:'';
+    width: 150px;
+    height: 40px;
+    position: absolute;
+    background-size: cover;
+    transform: rotate(90deg);
+    background-position: center;
+    border-radius: 5px;
+    /*background-image: url("../Image/Google-Play-Badge.png");*/
+}
+.social a.apple:before {
+    background-image: url("../Image/Google-Play-Badge.png");
+}
+
+.social a.android:before {
+    background-image: url("../Image/app-store-apple-computer-icons-png-favpng-SXKNjLyedz9MmUKnRpWrAxz0U.jpg");
+}

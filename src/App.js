@@ -4,7 +4,7 @@ import './Css/App.css'
 import './Css/Elevator.css'
 import './Css/Responsive global.css';
 import './Css/Responsive.css';
-import {Aside,Header,Footer,FirstPage,SecondPage,ThirdPage,FourthPage,LastPageFooter} from './Pages'
+import {Header,Footer,FirstPage,SecondPage,ThirdPage,FourthPage,AsideLeft} from './Pages'
 
 export default class App extends Component{
 
@@ -23,9 +23,9 @@ export default class App extends Component{
                    $('html,body').animate({
                        scrollTop : 10,
                    },500)
-               $('.wholePages>section').each(function(){
-                   if($(this).height() === 0){
-                       $(this).addClass('heightIncrement');
+               $('.wholePages .Page').each(function(){
+                   if($(this).height() > 0 && !$(this).hasClass('lastPage')){
+                       $(this).addClass('heightReduction');
                        // if ($(this).next().hasClass('wholeLastPageFooter') ){
                        //     $('.continue').fadeOut(0);
                        //     $('.foot').fadeIn(0);
@@ -44,6 +44,9 @@ export default class App extends Component{
                        //     $('.firstPageName1').css('margin-top' , -110*Index+'px')
                        // }
                        return false;
+                   }
+                   if($(this).height() > 0 && $(this).hasClass('lastPage')) {
+                       $(this).addClass('heightReductionHalf');
                    }
                })
            }
@@ -88,7 +91,8 @@ export default class App extends Component{
                 <Header />
                 <MainPages />
                 <Footer />
-                {/*<Aside />*/}
+                <Aside />
+
             </main>
         )
     }
@@ -106,7 +110,7 @@ class MainPages extends Component{
                 <SecondPage />
                 <ThirdPage />
                 <FourthPage />
-                <LastPageFooter />
+                {/*<LastPageFooter />*/}
 
             </main>
         )
@@ -114,6 +118,17 @@ class MainPages extends Component{
 
 }
 
+class Aside extends Component{
+
+    render(){
+        return(
+            <>
+                <AsideLeft />
+
+            </>
+        )
+    }
+}
 
 
 
