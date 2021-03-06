@@ -1,0 +1,95 @@
+.wholeThirdPage{
+    position: absolute;
+    bottom:-100vh;
+    width: 100%;
+    height: 0;
+    max-height: 100vh;
+    /*z-index: 0;*/
+    overflow: hidden;
+    /*background-color: violet;*/
+    display: flex;
+    justify-content: center;
+    transition: 0.5s linear;
+
+}
+.thirdPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../Image/allBackground.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.thirdPage>.thirdInside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60%;
+    height: 50%;
+    margin:24% 20% 26% 20%;
+    /*border:1px solid yellowgreen;*/
+    overflow: hidden;
+    /*cursor: pointer;*/
+}
+.thirdPage>.thirdInside>.thirdHeader{
+    height: 10%;
+    width: 100%;
+    /*border:1px solid blue;*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.thirdPage>.thirdInside>.video{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /*border:1px solid gold;*/
+}
+.thirdPage>.thirdInside>.video>.videos{
+    width: 20%;
+    height: 100%;
+    /*border:1px solid navy;*/
+    overflow-Y: auto;
+    /*direction: ltr;*/
+}
+.thirdPage>.thirdInside>.video>.videos>ul{
+    width: 100%;
+    height: 100%;
+}
+.thirdPage>.thirdInside>.video>.videos video{
+    width: 90%;
+    height: 110px;
+    border-radius: 10px;
+    /*margin: auto;*/
+    margin-bottom: 15px;
+    /*border:1px solid darkred;*/
+    cursor: pointer;
+    border:1px solid lightgray;
+}
+.thirdPage>.thirdInside>.video>.videos>ul>li:nth-of-type(1)>video{
+    border:2px solid gray;
+}
+
+.thirdPage>.thirdInside>.video>.videoDisplay{
+    width: 80%;
+    margin-right:2%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    /*border:10px solid transparent;*/
+}
+.thirdPage>.thirdInside>.video>.videoDisplay>video{
+    border-radius: 20px;
+    /*border-color: transparent;*/
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,106 @@
+/*.whole{*/
+/*    width: 100%;*/
+/*    height: 100vh;*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    position: fixed;*/
+/*    top:0;*/
+/*    z-index: 1;*/
+/*}*/
+
+aside{
+    position: fixed;
+    top:0;
+    width: 60px;
+    height: 100%;
+    z-index: 1;
+}
+aside.rightAside{
+    /*border:1px solid red;*/
+    right:0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+aside.rightAside>.continue, aside.rightAside>.foot{
+    transform: scale(-1);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 12px;
+    margin-bottom: 30px;
+    position: relative;
+    /*border: 1px solid red;*/
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+aside.rightAside>.foot{
+    display: none;
+}
+aside.rightAside>.continue::after , aside.rightAside>.foot::after{
+    content:"";
+    width: 1px;
+    height: 20px;
+    background-color: black;
+    margin-bottom:10px;
+    /*border:1px solid yellow;*/
+    text-align: center;
+    display: inline-block;
+}
+
+aside.leftAside{
+    /*border:1px solid blue;*/
+    left:0;
+}
+aside.leftAside>.asideDownCover{
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    height: 45%;
+    background-image: linear-gradient(to top, white 55%, transparent 120%);
+    /*border:1px solid turquoise;*/
+}
+aside.leftAside>.asideUpCover{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 44%;
+    background-image: linear-gradient(to bottom, white 55%, transparent 120%);
+    /*border:1px solid yellow;*/
+}
+aside.leftAside>ul{
+    width: 100%;
+    height: 100%;
+    transform: translateY(45%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 12px;
+}
+aside.leftAside>ul>li{
+    transform: scale(-1);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    /*border:1px solid gray;*/
+    /*margin-top: 40px;*/
+    cursor: default;
+    width: 30px;
+    height: 110px;
+    /*border:1px solid red;*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+aside.leftAside>ul>li:nth-of-type(2){
+    height: 100px;
+}
+aside.leftAside>ul>li:nth-of-type(3){
+    height: 120px;
+}
+aside.leftAside>ul>li:first-child{
+    transition: 1s;
+    /*margin-top: 600%;*/
+}

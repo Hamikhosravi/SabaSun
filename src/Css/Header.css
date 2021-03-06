@@ -1,0 +1,93 @@
+.header{
+    width: 100%;
+    height: 5vh;
+    /*border:1px solid yellowgreen;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    margin-top: 3vh;
+}
+.header>.logo{
+    width: 20%;
+    height: 100%;
+    /*border:1px solid red;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:0.2s linear;
+    opacity:0;
+}
+.header>.logo>img{
+    height: 90%;
+    cursor: pointer;
+}
+.header>nav{
+    width: 60%;
+    height: 100%;
+    display: none;
+    /*border: 1px solid violet;*/
+}
+.header>nav>ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.header>nav>ul>li{
+    cursor: pointer;
+    color: #484848
+}
+.header>.profileSearch{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*border: 1px solid aqua;*/
+    font-size: 15px;
+    color: #484848;
+}
+.header>.profileSearch>.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*border: 1px solid rosybrown;*/
+    width: 20%;
+    height: 100%;
+    margin-right:3%;
+    cursor: pointer;
+}
+.header>.profileSearch>.searchIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*border: 1px solid royalblue;*/
+    width: 20%;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+}
+
+.itemSearch{
+    position: absolute;
+    top:50%;
+    left: 100%;
+    transform:translateY(-50%);
+    width:0;
+    height: 35px;
+    transition: 0.2s linear;
+    border:none;
+    padding: 5px;
+    /*font-weight: normal;*/
+    font-family: Makarehlight;
+}
+
+
+.increment{
+    width: 220px;
+    border:2px solid gray;
+    outline: none;
+}

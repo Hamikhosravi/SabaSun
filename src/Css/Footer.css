@@ -1,0 +1,45 @@
+.Footer{
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    height: 7vh;
+    z-index: 2;
+}
+
+.social {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    /*border:1px solid aqua;*/
+}
+
+.social a{
+    width: 160px;
+    height: 60%;
+    border:1px solid gray;
+    margin: 6px 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    /*box-shadow: 1px 1px 5px gray;*/
+    transition: 0.2s;
+}
+.social a:hover{
+    box-shadow: 1px 1px 5px #5a5a5a;
+}
+.social a.apple{
+    background-image: url("../Image/Google-Play-Badge.png");
+    background-size: cover;
+}
+.social a.android{
+    background-image: url("../Image/app-store-apple-computer-icons-png-favpng-SXKNjLyedz9MmUKnRpWrAxz0U.jpg");
+    background-size: cover;
+    /*background-color: red;*/
+}

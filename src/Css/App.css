@@ -1,0 +1,87 @@
+*{
+  padding:0;
+  margin:0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: Makarehbold;
+}
+
+@font-face {
+  font-family: Makarehbold;
+  src: url(../Font/Dana-Pro/Danafontfamily/Dana-Bold.ttf);
+}
+@font-face {
+  font-family: Makarehlight;
+  src: url(../Font/Dana-Pro/Danafontfamily/Dana-Light.ttf);
+}
+@font-face {
+  font-family: AdadMakareh;
+  src: url(../Font/Dana-Pro/farsinumral/Dana-FaNum-Bold.ttf);
+}
+body{
+  direction: rtl;
+  height: calc(100vh + 20px);
+}
+.wholePages{
+  width: 100%;
+  position: fixed;
+}
+::scrollbar {
+  width: 8px;
+  background: transparent;
+}
+
+::scrollbar-track {
+  width: 8px;
+  background: #f3f4f5;
+}
+
+::scrollbar-thumb {
+  width: 8px;
+  border-radius: 10px;
+  background: #d4d6db;
+}
+
+.customScrollbar {
+  -webkit-overflow-scrolling: touch;
+}
+
+.customScrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: transparent;
+}
+
+.customScrollbar::-webkit-scrollbar-track {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background: #f3f4f5;
+}
+
+.customScrollbar::-webkit-scrollbar-thumb {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background: #b0b4bb;
+}
+
+.customScrollbar::-webkit-scrollbar-thumb:hover {
+  background: #c1c4cb;
+}
+
+.customScrollbar.\--auto-hide-scrollbar:not(:hover)::-webkit-scrollbar-thumb, .customScrollbar.\--auto-hide-scrollbar:not(:hover)::-webkit-scrollbar-thumb:hover, .customScrollbar.\--auto-hide-scrollbar:not(:hover)::-webkit-scrollbar-track {
+  background: none;
+}
+
+.heightIncrement{
+  height: 100vh !important;
+}
+
+
+
+
+
+
+
+

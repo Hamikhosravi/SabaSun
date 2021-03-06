@@ -1,0 +1,24 @@
+/*empty Small Mobile*/
+@media screen and (min-width:1px) {
+
+}
+
+/*sm Mobile*/
+@media screen and (min-width:576px) {
+
+}
+
+/*md Tablet*/
+@media screen and (min-width:768px) {
+
+}
+
+/*lg Desktop*/
+@media screen and (min-width:993px) {
+
+}
+
+/*xl Big*/
+@media screen and (min-width:1201px) {
+
+}
