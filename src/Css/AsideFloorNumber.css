@@ -1,0 +1,20 @@
+.floorNumberAside {
+    position: fixed;
+    left: 0;
+    top: 100px;
+    /*transform: translateY(-50%);*/
+    /*width: 200px;*/
+    /*height: 200px;*/
+    z-index: 200;
+    margin-left: -9%;
+    /*border:1px solid red;*/
+    /*border-radius: 10px;*/
+    /*background-color: #718395;*/
+}
+
+.floorNumberAside>p{
+    transition: 0.5s linear;
+    font-size: 30vw;
+    line-height: 1;
+}
+

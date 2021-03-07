@@ -1,127 +1,122 @@
-import React,{Component} from 'react';
+import React, {Component} from 'react';
 import $ from "jquery";
 import './Css/App.css'
 import './Css/Elevator.css'
 import './Css/Responsive global.css';
 import './Css/Responsive.css';
-import {Header,Footer,FirstPage,SecondPage,ThirdPage,FourthPage,AsideLeft} from './Pages'
+import {Header, Footer, FirstPage, SecondPage, ThirdPage, FourthPage, AsideLeft, AsideRight, AsideFloorNumber} from './Pages'
 
-export default class App extends Component{
+let Index, Length, floorNumber;
+
+export default class App extends Component {
+
+    state = {
+        flrNumber: ''
+    }
 
     componentDidMount() {
         $('.wholePages .Page').last().addClass('lastPage');
-        let h = $(window).innerHeight();
 
         $(window).scrollTop(0);
-        $(document).scroll(Scroll);
-        function Scroll(){
-
-           if ($(window).scrollTop() === 20){
-               // $('.secondInside>.photos').scrollTop(0);
-               // $('.secondInside>.photos').css("overflow" , "hidden");
-               // $('.secondInside>.showButton').fadeIn(500);
-               // $('.secondInside>.whiteCover').fadeIn(500);
-                   $('html,body').animate({
-                       scrollTop : 10,
-                   },500)
-               $('.wholePages .Page').each(function(){
-                   if($(this).height() > 0 && !$(this).hasClass('lastPage')){
-                       $(this).addClass('heightReduction');
-                       $(this).next().addClass('backgroundTransparent');
-                       // $(this).next().children().addClass('marginRightReduction');
-                       // if ($(this).next().hasClass('wholeLastPageFooter') ){
-                       //     $('.continue').fadeOut(0);
-                       //     $('.foot').fadeIn(0);
-                       // }
-                       // if($(this).hasClass('wholeLastPageFooter')){
-                       //     $(this).find('.footerCover').fadeOut(0);
-                       //     $(this).find('.footerCover').delay(500).fadeIn(300);
-                       //     $(this).find('.footerFourthPage').fadeOut(0);
-                       //     $(this).find('.footerFourthPage').slideDown(500);
-                       // }
-                       // $('header>nav').slideDown(300);
-                       // $('header>.logo').fadeTo(300,1);
-                       // $('header>.logo').css('height','100%');
-                       // let Index = $(this).index('.Page');
-                       // if (Index > -1){
-                       //     $('.firstPageName1').css('margin-top' , -110*Index+'px')
-                       // }
-                       return false;
-                   }
-                   if($(this).height() > 0 && $(this).hasClass('lastPage')) {
-                       $(this).addClass('heightReductionHalf');
-                   }
-               })
-           }
-
-            if ($(window).scrollTop() === 0){
-                $('html,body').animate({
-                    scrollTop : 10,
-                },500)
-                $($('.wholePages .Page').get().reverse()).each(function(){
-
-                    if($(this).hasClass('heightReduction')) {
-                        $(this).next().removeClass('backgroundTransparent');
-                    }
-
-                    if($(this).hasClass('heightReductionHalf') || $(this).hasClass('heightReduction')) {
-                        $(this).removeClass('heightReductionHalf heightReduction');
-
-                        return false;
-                    }
-
-                        //         if ($(this).next().hasClass('wholeLastPageFooter')){
-                //             $('.continue').fadeIn(0);
-                //             $('.foot').fadeOut(0);
-                //         }
-                //         if ($(this).prev().hasClass('wholeFirstPage')){
-                //             $('header>nav').slideUp(300);
-                //             $('header>.logo').fadeTo(300,0);
-                //             $('header>.logo').css('height','0');
-                //         }
-                //         let Index = $(this).index('.Page')-1;
-                //         if (Index > -1){
-                //             $('.firstPageName1').css('margin-top' , -110*Index+'px')
-                //         }
-
-                })
-            }
-
-        }
-
+        $(document).scroll(this.Scroll);
+        setTimeout(()=>{
+            this.setState({flrNumber: Length + 1})
+        },100);
+        Length = $('.wholePages .Page').length;
     }
 
-    mainPageClicked = () =>{
+    Scroll = () => {
+
+        if ($(window).scrollTop() === 20) {
+            this.Down();
+            $('html,body').animate({
+                scrollTop: 10,
+            }, 500)
+        }
+
+        if ($(window).scrollTop() === 0) {
+            this.Up();
+            $('html,body').animate({
+                scrollTop: 10,
+            }, 500)
+        }
+        this.setState({flrNumber: floorNumber})
+    }
+
+    Down = () => {
+        $('.wholePages .Page').each(function () {
+            Index = $(this).index() ;
+            floorNumber = Length - Index;
+
+            if ($(this).height() > 0 && !$(this).hasClass('lastPage')) {
+                $(this).addClass('heightReduction');
+                $(this).next().addClass('backgroundTransparent');
+
+                return false;
+            }
+            if ($(this).height() > 0 && $(this).hasClass('lastPage')) {
+                $(this).addClass('heightReductionHalf');
+            }
+        })
+    }
+
+    Up = () => {
+        $($('.wholePages .Page').get().reverse()).each(function () {
+
+            Index = $(this).index();
+            floorNumber = Length - Index + 1;
+
+            if ($(this).hasClass('heightReduction')) {
+                $(this).next().removeClass('backgroundTransparent');
+            }
+
+            if ($(this).hasClass('heightReductionHalf') || $(this).hasClass('heightReduction')) {
+                $(this).removeClass('heightReductionHalf heightReduction');
+
+                return false;
+            }
+
+        })
+    }
+
+
+
+
+
+
+    mainPageClicked = () => {
         $('.itemSearch').removeClass('increment');
     }
 
-    render(){
-        return(
-            <main className="wholePages" onClick={this.mainPageClicked}>
+    render() {
+        console.log(this.state.flrNumber)
 
-                <Header />
-                <MainPages />
-                <Footer />
-                <Aside />
+        return (
+            <div className="allPages" onScroll={this.Scroll}>
+                <main className="wholePages" onClick={this.mainPageClicked}>
 
-            </main>
+                    <Header/>
+                    <MainPages/>
+                    <Footer/>
+                    <Aside floor={this.state.flrNumber} len={Length+1}/>
+
+                </main>
+            </div>
         )
     }
 }
 
 
+class MainPages extends Component {
 
-class MainPages extends Component{
-
-    render(){
-        return(
+    render() {
+        return (
             <main className='elevator'>
 
-                <FirstPage />
-                <SecondPage />
-                <ThirdPage />
-                <FourthPage />
-                {/*<LastPageFooter />*/}
+                <FirstPage/>
+                <SecondPage/>
+                <ThirdPage/>
+                <FourthPage/>
 
             </main>
         )
@@ -129,13 +124,14 @@ class MainPages extends Component{
 
 }
 
-class Aside extends Component{
+class Aside extends Component {
 
-    render(){
-        return(
+    render() {
+        return (
             <>
-                <AsideLeft />
-
+                <AsideFloorNumber floor={this.props.floor}/>
+                <AsideLeft/>
+                <AsideRight pos={this.props.floor} len={this.props.len}/>
             </>
         )
     }

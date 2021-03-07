@@ -1,0 +1,39 @@
+.rightAside {
+    position: fixed;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7px;
+    height: 30%;
+    z-index: 200;
+    border-radius: 10px;
+    background-color: #718395;
+}
+
+.rightAside > aside {
+    position: unset;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.rightAside .elevatorPath{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.rightAside .elevatorPosition {
+    width: 100%;
+    height: 20%;
+    border-radius: 10px;
+    background-color: white;
+    position: absolute;;
+    top:0;
+    transition: 0.5s linear;
+}
+
+.rightAside p{
+    position: relative;
+    z-index: 1000000;
+}
