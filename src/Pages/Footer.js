@@ -49,8 +49,8 @@ export default class Footer extends Component {
                         </li>
                         <li className="footerLogos">
                             <ul>
-                                <li></li>
-                                <li></li>
+                                <li><a href="" className="apple"> </a></li>
+                                <li><a href="" className="android"> </a></li>
                                 <li>
                                     <ul>
                                         <li></li>

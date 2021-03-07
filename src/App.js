@@ -56,6 +56,7 @@ export default class App extends Component {
             }
             if ($(this).height() > 0 && $(this).hasClass('lastPage')) {
                 $(this).addClass('heightReductionHalf');
+                $('.leftAside').fadeOut(300);
             }
         })
     }
@@ -72,7 +73,7 @@ export default class App extends Component {
 
             if ($(this).hasClass('heightReductionHalf') || $(this).hasClass('heightReduction')) {
                 $(this).removeClass('heightReductionHalf heightReduction');
-
+                $('.leftAside').fadeIn(300);
                 return false;
             }
 
@@ -112,10 +113,10 @@ class MainPages extends Component {
         return (
             <main className='elevator'>
 
-                {/*<FirstPage/>*/}
-                {/*<SecondPage/>*/}
-                {/*<ThirdPage/>*/}
-                {/*<FourthPage/>*/}
+                <FirstPage/>
+                <SecondPage/>
+                <ThirdPage/>
+                <FourthPage/>
 
             </main>
         )
