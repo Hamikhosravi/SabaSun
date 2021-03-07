@@ -3,19 +3,19 @@
   margin:0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: Makarehbold;
+  font-family: Danalight;
 }
 
 @font-face {
-  font-family: Makarehbold;
+  font-family: Danabold;
   src: url(../Font/Dana-Pro/Danafontfamily/Dana-Bold.ttf);
 }
 @font-face {
-  font-family: Makarehlight;
+  font-family: Danalight;
   src: url(../Font/Dana-Pro/Danafontfamily/Dana-Light.ttf);
 }
 @font-face {
-  font-family: AdadMakareh;
+  font-family: AdadDana;
   src: url(../Font/Dana-Pro/farsinumral/Dana-FaNum-Bold.ttf);
 }
 body{
@@ -94,7 +94,7 @@ body{
 }
 
 .heightReductionHalf{
-  height: calc(100vh - 480px) !important;
+  height: calc(100vh - 380px) !important;
 }
 
 .backgroundTransparent{

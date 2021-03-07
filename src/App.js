@@ -89,8 +89,7 @@ export default class App extends Component {
     }
 
     render() {
-        console.log(this.state.flrNumber)
-
+        // console.log(this.state.flrNumber)
         return (
             <div className="allPages" onScroll={this.Scroll}>
                 <main className="wholePages" onClick={this.mainPageClicked}>
@@ -113,10 +112,10 @@ class MainPages extends Component {
         return (
             <main className='elevator'>
 
-                <FirstPage/>
-                <SecondPage/>
-                <ThirdPage/>
-                <FourthPage/>
+                {/*<FirstPage/>*/}
+                {/*<SecondPage/>*/}
+                {/*<ThirdPage/>*/}
+                {/*<FourthPage/>*/}
 
             </main>
         )

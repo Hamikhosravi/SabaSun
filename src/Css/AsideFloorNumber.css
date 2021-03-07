@@ -2,14 +2,9 @@
     position: fixed;
     left: 0;
     top: 100px;
-    /*transform: translateY(-50%);*/
-    /*width: 200px;*/
-    /*height: 200px;*/
-    z-index: 200;
+    z-index: -1;
     margin-left: -9%;
-    /*border:1px solid red;*/
-    /*border-radius: 10px;*/
-    /*background-color: #718395;*/
+
 }
 
 .floorNumberAside>p{
