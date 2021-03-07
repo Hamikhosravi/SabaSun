@@ -6,14 +6,26 @@
     /*z-index: 0;*/
     overflow: hidden;
     /*background-color: violet;*/
-    background-color: #bbd71b;
-
+    /*background-color: #bbd71b;*/
+    /*background-image: linear-gradient(to right, transparent 90%, white 10%);*/
+    padding-right: 10%;
     display: flex;
     justify-content: center;
     transition: 0.5s linear;
-
+}
+.wholeThirdPage:before{
+    content:'';
+    position: absolute;
+    right:0;
+    top:0;
+    width: 10%;
+    height: 100%;
+    background-color: white;
+    transition: 0.5s linear;
 }
 .thirdPage{
+    /*margin-right: 10%;*/
+    transition: 0.5s linear;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -6,15 +6,27 @@
     /*max-height: 100vh;*/
     /*z-index: 0;*/
     overflow: hidden;
-    background-color: #028d17;
-
+    /*background-color: #028d17;*/
+    /*background-image: linear-gradient(to right, transparent 90%, white 10%);*/
+    padding-right: 10%;
     /*background-color: green;*/
     display: flex;
     justify-content: center;
     transition: 0.5s linear;
-
+}
+.wholeFourthPage:before{
+    content:'';
+    position: absolute;
+    right:0;
+    top:0;
+    width: 10%;
+    height: 100%;
+    background-color: white;
+    transition: 0.5s linear;
 }
 .fourthPage{
+    /*margin-right: 10%;*/
+    transition: 0.5s linear;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

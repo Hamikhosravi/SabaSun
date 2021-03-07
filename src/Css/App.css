@@ -91,6 +91,20 @@ body{
   height: calc(100vh - 480px) !important;
 }
 
+.backgroundTransparent{
+  /*background-image: linear-gradient(to right, transparent, transparent) !important;*/
+  padding-right:0 !important;
+}
+.backgroundTransparent:before{
+  content:'';
+  width:0 !important;
+  background-color: white !important;
+}
+
+/*.marginRightReduction{*/
+/*  margin-right:0 !important;*/
+/*}*/
+
 
 
 

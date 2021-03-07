@@ -9,6 +9,7 @@ import {Header,Footer,FirstPage,SecondPage,ThirdPage,FourthPage,AsideLeft} from 
 export default class App extends Component{
 
     componentDidMount() {
+        $('.wholePages .Page').last().addClass('lastPage');
         let h = $(window).innerHeight();
 
         $(window).scrollTop(0);
@@ -26,6 +27,8 @@ export default class App extends Component{
                $('.wholePages .Page').each(function(){
                    if($(this).height() > 0 && !$(this).hasClass('lastPage')){
                        $(this).addClass('heightReduction');
+                       $(this).next().addClass('backgroundTransparent');
+                       // $(this).next().children().addClass('marginRightReduction');
                        // if ($(this).next().hasClass('wholeLastPageFooter') ){
                        //     $('.continue').fadeOut(0);
                        //     $('.foot').fadeIn(0);
@@ -55,10 +58,19 @@ export default class App extends Component{
                 $('html,body').animate({
                     scrollTop : 10,
                 },500)
-                // $($('.wholePages>section').get().reverse()).each(function(){
-                //     if($(this).height() > h*90/100){
-                //         $(this).removeClass('heightIncrement');
-                //         if ($(this).next().hasClass('wholeLastPageFooter')){
+                $($('.wholePages .Page').get().reverse()).each(function(){
+
+                    if($(this).hasClass('heightReduction')) {
+                        $(this).next().removeClass('backgroundTransparent');
+                    }
+
+                    if($(this).hasClass('heightReductionHalf') || $(this).hasClass('heightReduction')) {
+                        $(this).removeClass('heightReductionHalf heightReduction');
+
+                        return false;
+                    }
+
+                        //         if ($(this).next().hasClass('wholeLastPageFooter')){
                 //             $('.continue').fadeIn(0);
                 //             $('.foot').fadeOut(0);
                 //         }
@@ -71,9 +83,8 @@ export default class App extends Component{
                 //         if (Index > -1){
                 //             $('.firstPageName1').css('margin-top' , -110*Index+'px')
                 //         }
-                //         return false;
-                //     }
-                // })
+
+                })
             }
 
         }

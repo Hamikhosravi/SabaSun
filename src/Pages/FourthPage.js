@@ -15,7 +15,7 @@ export default class FourthPage extends Component{
 
     render(){
         return(
-            <section className="wholeFourthPage Page lastPage">
+            <section className="wholeFourthPage Page">
                 <section className="fourthPage">
                     {/*<div className="fourthInside">*/}
                     {/*    <article className="fourthPageContent">*/}
