@@ -72,10 +72,10 @@ export default class Header extends Component{
                 <nav>
                     <ul>
                         <li className="mainPage">صفحه اصلی</li>
-                        <li>ارسال گزارش</li>
-                        <li className="postha">پست ها</li>
-                        <li>تماس با ما</li>
+                        <li className="Maghalat">مقالات</li>
+                        <li className="SabtSefaresh">ثبت سفارش</li>
                         <li className="darbareMa">درباره ما</li>
+                        <li className="tamasBaMa">تماس با ما</li>
                         <li className="HeaderUnderline"> </li>
                     </ul>
                 </nav>

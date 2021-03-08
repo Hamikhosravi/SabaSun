@@ -3,6 +3,7 @@ import logo2 from "../Image/Favicon.png";
 import namad from "../Image/Namad.png";
 import digitalMedia from "../Image/Digital_Media.png";
 import '../Css/Footer.css';
+import '../Css/Icomoon.css'
 import $ from "jquery";
 
 export default class Footer extends Component {
@@ -23,20 +24,20 @@ export default class Footer extends Component {
 
                         <li className="footerFirstPart">
                             <ul className='services'>خدمات
-                                <li>مورد 1</li>
-                                <li>مورد 2</li>
-                                <li>مورد 3</li>
-                                <li>مورد 4</li>
-                                <li>مورد 5</li>
+                                <li>نصب و راه اندازی</li>
+                                <li>ورود اعضاء</li>
+                                <li>سرویس و نگهداری</li>
+                                <li>اخبار و رویدادها</li>
+                                <li>پروژه ها</li>
                             </ul>
                         </li>
                         <li className="footerSecondPart">
                             <ul className='services'>خدمات
-                                <li>مورد 1</li>
-                                <li>مورد 2</li>
-                                <li>مورد 3</li>
-                                <li>مورد 4</li>
-                                <li>مورد 5</li>
+                                <li>نصب و راه اندازی</li>
+                                <li>ورود اعضاء</li>
+                                <li>سرویس و نگهداری</li>
+                                <li>اخبار و رویدادها</li>
+                                <li>پروژه ها</li>
                             </ul>
                         </li>
                         <li className="footerThirdPart">
@@ -52,11 +53,11 @@ export default class Footer extends Component {
                                 <li><a href="" className="apple"> </a></li>
                                 <li><a href="" className="android"> </a></li>
                                 <li>
-                                    <ul>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
+                                    <ul className="socials">
+                                        <li className='whatsapp'><a href=""><span className="icon-whatsapp"></span></a></li>
+                                        <li className='telegram'><a href=""><span className="icon-telegram"></span></a></li>
+                                        <li className='instagram'><a href=""><span className="icon-instagram"></span></a></li>
+                                        <li className='facebook'><a href=""><span className="icon-facebook2"></span></a></li>
                                     </ul>
                                 </li>
                             </ul>

@@ -71,7 +71,12 @@
 .FooterAbove .services>li{
     margin: 10px 0;
     font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s linear;
     /*padding-right: 20px;*/
+}
+.FooterAbove .services>li:hover{
+    color: #39BAE8
 }
 
 .FooterAbove .services{
@@ -111,8 +116,9 @@
     justify-content: space-evenly;
 }
 .footerLogos>ul>li{
-    width: 55%;
-    height: 21%;
+    width: 100%;
+    max-width: 190px;
+    height: 19%;
 }
 
 .footerLogos>ul>li>a {
@@ -143,11 +149,67 @@
     background-image: url("../Image/app-store-apple-computer-icons-png-favpng-SXKNjLyedz9MmUKnRpWrAxz0U.jpg");
 }
 
-.footerLogos>ul>li>ul{
+.footerLogos .socials{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    width: 100%;
 }
+
+.footerLogos .socials>li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    padding: 8px;
+    border: 1px solid #404040;
+    border-radius: 10px;
+    transition: 0.2s linear;
+    cursor: pointer;
+}
+
+.footerLogos .socials>li>a{
+    display: inherit;
+    width: auto;
+    height: auto;
+}
+
+.footerLogos .socials>li span{
+    transition: 0.2s linear;
+}
+
+.footerLogos .socials>.whatsapp:hover{
+    border-color: #23d365;
+}
+
+.footerLogos .socials>.whatsapp:hover  span{
+    color: #23d365;
+}
+
+.footerLogos .socials>.telegram:hover{
+    border-color: #2ca5e0;
+}
+
+.footerLogos .socials>.telegram:hover  span{
+    color: #2ca5e0;
+}
+
+.footerLogos .socials>.instagram:hover{
+    border-color: #dd2a7b;
+}
+
+.footerLogos .socials>.instagram:hover  span{
+    color: #dd2a7b;
+}
+.footerLogos .socials>.facebook:hover{
+    border-color: #4267B2;
+}
+
+.footerLogos .socials>.facebook:hover  span{
+    color: #4267B2;
+}
+
+
 
 /*.footerPage > .footerThirdPart {*/
 /*    position: absolute;*/
