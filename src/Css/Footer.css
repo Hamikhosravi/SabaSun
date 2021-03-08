@@ -75,6 +75,7 @@
     transition: 0.2s linear;
     /*padding-right: 20px;*/
 }
+
 .FooterAbove .services>li:hover{
     color: #39BAE8
 }
@@ -99,10 +100,10 @@
 .services::after {
     content: '';
     position: absolute;
-    top: 18px;
+    top: 19px;
     right: 20%;
     width: 30%;
-    height: 6px;
+    height: 4px;
     background-color: #39BAE8;
     border-radius: 5px;
 }
@@ -208,131 +209,3 @@
 .footerLogos .socials>.facebook:hover  span{
     color: #4267B2;
 }
-
-
-
-/*.footerPage > .footerThirdPart {*/
-/*    position: absolute;*/
-/*    left: 50%;*/
-/*    top: -15px;*/
-/*    transform: translateX(-50%);*/
-/*    width: 100px;*/
-/*    height: 7px;*/
-/*    background-color: white;*/
-/*    border-radius: 50px;*/
-/*    cursor: pointer;*/
-/*}*/
-
-/*.footerFourthPage > .footerFirstPart {*/
-/*    width: 100%;*/
-/*    height: 95%;*/
-/*    !*border:1px solid red;*!*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    padding-top: 20px;*/
-/*}*/
-
-/*.footerFourthPage > .footerFirstPart > .footerLogo {*/
-/*    width: 10%;*/
-/*    height: 100%;*/
-/*    !*border:1px solid aqua;*!*/
-/*    text-align: center;*/
-/*}*/
-
-/*.footerFourthPage > .footerFirstPart > .footerLogo > img {*/
-/*    width: 30%;*/
-/*}*/
-
-/*.footerFourthPage > .footerFirstPart > .footerFirstLink {*/
-/*    width: 20%;*/
-/*    height: 100%;*/
-/*    !*border:1px solid yellowgreen;*!*/
-/*}*/
-
-/*.footerFourthPage > .footerFirstPart > div > header {*/
-/*    display: flex;*/
-/*    justify-content: flex-start;*/
-/*    align-items: center;*/
-/*    width: 80%;*/
-/*    height: 10%;*/
-/*    border-bottom: 2px solid coral;*/
-/*}*/
-
-/*.footerFourthPage > .footerFirstPart > div > ul {*/
-/*    width: 100%;*/
-/*    height: 90%;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: space-evenly;*/
-/*    align-items: flex-start;*/
-/*    margin-right: 25px;*/
-/*    list-style-image: url("../Image/FaviconItem.png");*/
-/*}*/
-
-/*.footerFourthPage > .footerFirstPart > div > ul > li {*/
-/*    cursor: pointer;*/
-/*}*/
-
-
-/*.footerFourthPage > .footerFirstPart > .footerThirdLink > ul {*/
-/*    justify-content: flex-start;*/
-/*}*/
-
-/*.footerFirstPart > .footerThirdLink > ul > li {*/
-/*    margin: 10px 0;*/
-/*}*/
-
-/*.footerFirstPart > .footerThirdLink > ul > li:nth-of-type(1) {*/
-/*    margin-top: 25px;*/
-/*}*/
-
-/*.footerFourthPage > .footerFirstPart > .footerSecondLink {*/
-/*    width: 20%;*/
-/*    height: 100%;*/
-/*    !*border:1px solid fuchsia;*!*/
-/*}*/
-
-/*.footerFourthPage > .footerFirstPart > .footerThirdLink {*/
-/*    width: 20%;*/
-/*    height: 100%;*/
-/*    !*border:1px solid chocolate;*!*/
-/*}*/
-
-/*.footerFourthPage > .footerFirstPart > .footerAuthorizationLogo {*/
-/*    width: 30%;*/
-/*    height: 100%;*/
-/*    !*border:1px solid crimson;*!*/
-/*    display: flex;*/
-/*    justify-content: space-evenly;*/
-/*    align-items: flex-end;*/
-/*}*/
-
-/*.footerAuthorizationLogo > img {*/
-/*    width: 22%;*/
-/*    margin: 2%;*/
-/*}*/
-
-/*.footerAuthorizationLogo > img:nth-of-type(2) {*/
-/*    width: 25%;*/
-/*}*/
-
-/*.footerFourthPage > .footerSecondPart {*/
-/*    width: 100%;*/
-/*    height: 5%;*/
-/*    !*border:1px solid blue;*!*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    font-size: 10px;*/
-
-/*}*/
-
-/*.footerFourthPage > .footerSecondPart > p {*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    width: 60%;*/
-/*    height: 100%;*/
-/*    border-top: 1px solid gray;*/
-/*}*/

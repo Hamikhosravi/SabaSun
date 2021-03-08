@@ -91,12 +91,21 @@ body{
 
 .heightReduction {
   height: 0 !important;
+  transform: scale(0.6)skew(20deg);
 }
 
 .heightReductionHalf{
   height: calc(100vh - 380px) !important;
 }
 
+.heightReductionHalf .elevatorLastPage>div{
+  height: calc(77% + 300px);
+}
+
+
+.heightAdjustment{
+height: calc(100vh - 80px) !important;
+}
 .backgroundTransparent{
   /*background-image: linear-gradient(to right, transparent, transparent) !important;*/
   padding-right:0 !important;

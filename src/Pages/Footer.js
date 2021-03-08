@@ -1,18 +1,9 @@
 import React, {Component} from "react";
-import logo2 from "../Image/Favicon.png";
-import namad from "../Image/Namad.png";
-import digitalMedia from "../Image/Digital_Media.png";
 import '../Css/Footer.css';
 import '../Css/Icomoon.css'
 import $ from "jquery";
 
 export default class Footer extends Component {
-
-    componentDidMount() {
-        $('.footerCover').click(function () {
-            $(window).scrollTop(0);
-        })
-    }
 
 
     render() {

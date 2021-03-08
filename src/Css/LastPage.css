@@ -1,0 +1,144 @@
+.wholeLastPage{
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 160px);
+    display: flex;
+    justify-content: center;
+    padding-right: 10%;
+    overflow: hidden;
+    transition: 0.5s linear;
+    background-image: url("../Image/flr1Photo.png");
+    background-position: bottom;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+.wholeLastPage:before{
+    content:'';
+    position: absolute;
+    right:0;
+    top:0;
+    width: 10%;
+    height: 100%;
+    background-color: white;
+    transition: 0.5s linear;
+}
+.elevatorLastPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 90%;
+    height: 100%;
+    max-width: 1600px;
+    margin: auto;
+    position: relative;
+}
+.elevatorLastPage>div{
+    padding: 20px 30px;
+    width: 74%;
+    height: 77%;
+    /*border:1px solid green;*/
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s linear;
+    /*position: absolute;*/
+    /*bottom:0;*/
+    /*right:0;*/
+    position: relative;
+}
+.elevatorLastPage>div>section{
+    width: 100%;
+    height: 50%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.elevatorLastPage>div>section>h2{
+    position: relative;
+}
+
+.elevatorLastPage h2::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 200px;
+    height: 2px;
+    background-color: #718395;
+    border-radius: 5px;
+}
+
+.elevatorLastPage h2::after {
+    content: '';
+    position: absolute;
+    top: 49px;
+    right: 0;
+    width: 80px;
+    height: 4px;
+    background-color: #39BAE8;
+    border-radius: 5px;
+}
+
+.elevatorLastPage>div ul{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    overflow: auto;
+    margin-top: 50px;
+}
+.elevatorLastPage>div ul>li{
+    margin-left: 20px;
+}
+
+.proofList ul>li{
+    width: 220px;
+    min-width: 220px;
+    height: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.proofList ul>li:nth-of-type(odd){
+    background-image: url("../Image/Govahi1.png");
+}
+
+.proofList ul>li:nth-of-type(even){
+    background-image: url("../Image/Govahi2.png");
+}
+
+.staffList ul{
+    width: 100%;
+    height: 100px;
+    align-items: center;
+}
+
+.staffList ul>li{
+    width: 150px;
+    min-width: 150px;
+    height: 70px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../Image/staff.png");
+    transition: 0.2s linear;
+}
+
+.staffList ul>li:hover{
+    background-image: url("../Image/staffHover.png");
+    width: 200px;
+    height: 100px;
+}
+
+.firstFloorCover{
+    position: absolute;
+    height: 87%;
+    width: 20%;
+    left: -5px;
+    top:40px;
+    z-index: 10;
+    /*border: 1px solid red;*/
+    background-image: linear-gradient(to right, black, transparent);
+}
+

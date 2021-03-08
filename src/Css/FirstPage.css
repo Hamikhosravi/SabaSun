@@ -1,73 +1,108 @@
-.wholeFirstPage{
+.wholeFirstPage {
     position: relative;
-    /*top: 0;*/
     width: 100%;
     height: calc(100vh - 160px);
     overflow: hidden;
-    background-color: #00B4CF;
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*background-color: royalblue;*/
-    /*border:1px solid aqua;*/
+    /*background-color: #00B4CF;*/
     transition: 0.5s linear;
+    max-width: 1600px;
+    margin: auto;
 }
-.firstPage{
+
+.firstPage {
     display: flex;
     justify-content: center;
     align-items: center;
-    /*position: absolute;*/
-    /*top: 0;*/
     width: 100%;
     height: 100%;
-    /*background-image: url("../Image/allBackground.jpg");*/
-    /*background-size: 80% 80%;*/
-    background-position: center;
+}
+
+.firstPageContent {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.firstPageContent > h1 {
+    color: white;
+    font-size: 110px;
+    line-height: 150px;
+}
+
+.firstPageContent > div {
+    width: 100%;
+    height: 100px;
+    /*border:1px solid red;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.firstPageContent > div > a {
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 110px;
+    height: 50%;
+    margin: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s linear;
+}
+
+.firstPageContent > div > .backup:hover {
+    background-color: white;
+    color: black;
+}
+
+.firstPageContent > div > .aboutus {
+    background-color: white;
+    color: black;
+}
+
+.firstPageContent > div > .aboutus:hover {
+    background-color: transparent;
+    color: white;
+}
+
+.firstPagePhotos {
+    width: 45%;
+    height: 100%;
+    display: flex;
+}
+
+.firstPagePhotos > div {
+    padding: 20px;
+    width: 50%;
+    height: 100%;
+    background-image: url("../Image/Rail.png");
+    background-size: contain;
     background-repeat: no-repeat;
-}
-.firstPage>.firstInside{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    /*border:1px solid yellowgreen;*/
-    overflow: hidden;
-    /*cursor: pointer;*/
-}
-.firstPage>.firstInside>.slider{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-position: center;
 }
 
-.firstPage>.firstInside>.slider>ul{
-    position: absolute;
-    right: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.firstPage>.firstInside>.slider>ul>li{
-    margin:10px;
-    width: 10px;
-    height: 10px;
-    border:1px solid transparent;
-    overflow: hidden;
-    background-color: lightgray;
-    cursor: pointer;
-}
-.firstPage>.firstInside>.slider>ul>li:nth-of-type(1){
-    background-color: coral;
-}
-.firstPage>.firstInside>.slider img{
-    object-fit: cover;
+.firstPagePhotos > div > img {
     width: 100%;
-    height: 100%;
+    transition: 1s linear;
 }
 
+.firstPagePhotos > .firstPhoto > img {
+    margin-top: 60%;
+}
 
+.firstPagePhotos > .firstPhoto > img:hover {
+    margin-top: 2%;
+}
+
+.firstPagePhotos > .secondPhoto > img {
+    margin-top: 10%;
+}
+
+.firstPagePhotos > .secondPhoto > img:hover {
+    margin-top: 75%;
+}

@@ -1,52 +1,27 @@
 import React, {Component} from "react";
 import '../Css/FirstPage.css';
-import slider01 from "../Image/slider01.jpg";
-import slider02 from "../Image/slider02.jpg";
-import slider03 from "../Image/slider03.jpg";
+import firstElevator from "../Image/firstElevator.png"
+import secondElevator from "../Image/secondElevator.png"
+
 import $ from "jquery";
 
-export default class FirstPage extends Component{
+export default class FirstPage extends Component {
 
-    componentDidMount() {
-        let counter =0;
-
-        $('.sliderButtons li').click(function (){
-            counter = $(this).index();
-            // clearInterval(check1);
-            // check1 = setInterval(Slider, 7000);
-            $(this).parent().siblings().slideUp(500, function(){
-                let itemCounter = $('.sliderButtons li').eq(counter);
-                $(this).attr('src', itemCounter.children('img').attr('src'));
-                itemCounter.css("background-color", "coral");
-                itemCounter.siblings('li').css("background-color", "lightgray");
-            }).slideDown(500)
-
-        })
-
-        // let check1 = setInterval(Slider, 7000);
-        // function Slider(){
-        //     ++counter;
-        //     if (counter > (($('.sliderButtons li').length)-1) ){
-        //         counter = 0;
-        //     }
-        //     $('.sliderButtons li').eq(counter).click();
-        // }
-    }
-
-    render(){
-        return(
+    render() {
+        return (
             <section className="wholeFirstPage Page">
                 <section className="firstPage">
-                    {/*<div className="firstInside">*/}
-                    {/*    <section className="slider">*/}
-                    {/*        <img src={slider01} alt="" className="firstPageSliderPhoto"/>*/}
-                    {/*        <ul className="sliderButtons">*/}
-                    {/*            <li><img src={slider01} alt=""/></li>*/}
-                    {/*            <li><img src={slider02} alt=""/></li>*/}
-                    {/*            <li><img src={slider03} alt=""/></li>*/}
-                    {/*        </ul>*/}
-                    {/*    </section>*/}
-                    {/*</div>*/}
+                    <article className="firstPageContent">
+                        <h1>آسوده در آســانســــور حرکت کنید</h1>
+                        <div>
+                            <a className='backup' href="">پشتیبانی</a>
+                            <a className='aboutus' href="">درباره ما</a>
+                        </div>
+                    </article>
+                    <div className='firstPagePhotos'>
+                        <div className="firstPhoto"><img src={firstElevator} alt="SabaSun Elevator"/></div>
+                        <div className="secondPhoto"><img src={secondElevator} alt="SabaSun Elevator"/></div>
+                    </div>
                 </section>
             </section>
         )

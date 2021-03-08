@@ -65,3 +65,10 @@
 .social a.android:before {
     background-image: url("../Image/app-store-apple-computer-icons-png-favpng-SXKNjLyedz9MmUKnRpWrAxz0U.jpg");
 }
+
+.leftAside > aside>.downloadFromHere{
+    position: fixed;;
+    left: calc(5% + 50px);
+    top: 15%;
+    display: none;
+}

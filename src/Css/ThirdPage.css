@@ -1,108 +1,128 @@
-.wholeThirdPage{
+.wholeThirdPage {
     position: relative;
-    /*bottom:-100vh;*/
     width: 100%;
     height: calc(100vh - 160px);
-    /*z-index: 0;*/
     overflow: hidden;
-    /*background-color: violet;*/
-    /*background-color: #bbd71b;*/
-    /*background-image: linear-gradient(to right, transparent 90%, white 10%);*/
     padding-right: 10%;
     display: flex;
     justify-content: center;
     transition: 0.5s linear;
+    max-width: 1600px;
+    margin: auto;
 }
-.wholeThirdPage:before{
-    content:'';
+
+.wholeThirdPage:before {
+    content: '';
     position: absolute;
-    right:0;
-    top:0;
+    right: 0;
+    top: 0;
     width: 10%;
     height: 100%;
     background-color: white;
     transition: 0.5s linear;
 }
-.thirdPage{
-    /*margin-right: 10%;*/
-    transition: 0.5s linear;
+
+.thirdPage {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    /*border: 1px solid red;*/
+    padding: 20px 30px;
+}
+
+.thirdPage > h2 {
+    width: 100%;
+    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
-    /*position: absolute;*/
-    /*bottom: 0;*/
+    color: white;
+    position: relative;
+}
+
+.thirdPage > h2::before {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 50%;;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 2px;
+    background-color: #718395;
+    border-radius: 5px;
+}
+
+.thirdPage > h2::after {
+    content: '';
+    position: absolute;
+    bottom: 9px;
+    left: 50%;;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #39BAE8;
+    border-radius: 5px;
+}
+
+.thirdPageContent {
     width: 100%;
-    height: 100%;
-    /*background-image: url("../Image/allBackground.jpg");*/
-    background-size: cover;
+    height: calc(100% - 200px);
+    padding: 0 50px;
+    background-image: url("../Image/thirdPagePhoto.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 45% bottom;
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    color: white;
+}
+
+.thirdPageContent>div{
+    width: 30%;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.thirdPageContent>div:before{
+    content:'';
+    position: absolute;
+    left: calc(100% + 10px);
+    width: 60px;
+    height: 60px;
+    border: 1px solid #151B26;
+    border-radius: 10px;
     background-position: center;
+    background-size: 60% auto;
     background-repeat: no-repeat;
 }
 
-.thirdPage>.thirdInside{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    width: 60%;
-    height: 50%;
-    margin:24% 20% 26% 20%;
-    /*border:1px solid yellowgreen;*/
-    overflow: hidden;
-    /*cursor: pointer;*/
+.thirdPageContent>.item1:before {
+background-image: url("../Image/item1.png");
 }
-.thirdPage>.thirdInside>.thirdHeader{
-    height: 10%;
-    width: 100%;
-    /*border:1px solid blue;*/
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+.thirdPageContent>.item2:before {
+    background-image: url("../Image/item2.png");
 }
-.thirdPage>.thirdInside>.video{
-    height: 90%;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    /*border:1px solid gold;*/
+.thirdPageContent>.item3:before {
+    background-image: url("../Image/item3.png");
 }
-.thirdPage>.thirdInside>.video>.videos{
-    width: 20%;
-    height: 100%;
-    /*border:1px solid navy;*/
-    overflow-Y: auto;
-    /*direction: ltr;*/
-}
-.thirdPage>.thirdInside>.video>.videos>ul{
-    width: 100%;
-    height: 100%;
-}
-.thirdPage>.thirdInside>.video>.videos video{
-    width: 90%;
-    height: 110px;
-    border-radius: 10px;
-    /*margin: auto;*/
-    margin-bottom: 15px;
-    /*border:1px solid darkred;*/
-    cursor: pointer;
-    border:1px solid lightgray;
-}
-.thirdPage>.thirdInside>.video>.videos>ul>li:nth-of-type(1)>video{
-    border:2px solid gray;
+.thirdPageContent>.item4:before {
+    background-image: url("../Image/item4.png");
 }
 
-.thirdPage>.thirdInside>.video>.videoDisplay{
-    width: 80%;
-    margin-right:2%;
-    height: 100%;
-    border-radius: 20px;
-    overflow: hidden;
-    /*border:10px solid transparent;*/
+.thirdPageContent>div:nth-of-type(odd){
+    margin-left: 20%;
 }
-.thirdPage>.thirdInside>.video>.videoDisplay>video{
-    border-radius: 20px;
-    /*border-color: transparent;*/
-    width: 100%;
-    height: 100%;
+
+.thirdPageContent>div:nth-of-type(even){
+    margin-right: 20%;
 }
+
+.thirdPageContent>div>h4{
+    color: #39BAE8;
+    margin-bottom: 8px;
+}
+
+

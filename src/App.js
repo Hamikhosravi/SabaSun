@@ -4,7 +4,7 @@ import './Css/App.css'
 import './Css/Elevator.css'
 import './Css/Responsive global.css';
 import './Css/Responsive.css';
-import {Header, Footer, FirstPage, SecondPage, ThirdPage, FourthPage, AsideLeft, AsideRight, AsideFloorNumber} from './Pages'
+import {Header, Footer, FirstPage, SecondPage, ThirdPage, FourthPage, FifthPage, LastPage, AsideLeft, AsideRight, AsideFloorNumber} from './Pages'
 
 let Index, Length, floorNumber;
 
@@ -16,6 +16,7 @@ export default class App extends Component {
 
     componentDidMount() {
         $('.wholePages .Page').last().addClass('lastPage');
+        $('.wholePages .Page').last().css('height', 'calc(100vh - 80px)');
 
         $(window).scrollTop(0);
         $(document).scroll(this.Scroll);
@@ -52,12 +53,19 @@ export default class App extends Component {
                 $(this).addClass('heightReduction');
                 $(this).next().addClass('backgroundTransparent');
 
+                if ( $(this).next().hasClass('Applications')) {
+                    $('.downloadFromHere').fadeIn(300);
+                } else {
+                    $('.downloadFromHere').fadeOut(300);
+                }
+
                 return false;
             }
             if ($(this).height() > 0 && $(this).hasClass('lastPage')) {
                 $(this).addClass('heightReductionHalf');
                 $('.leftAside').fadeOut(300);
             }
+
         })
     }
 
@@ -74,16 +82,20 @@ export default class App extends Component {
             if ($(this).hasClass('heightReductionHalf') || $(this).hasClass('heightReduction')) {
                 $(this).removeClass('heightReductionHalf heightReduction');
                 $('.leftAside').fadeIn(300);
+
+                if ($(this).hasClass('Applications')){
+                    $('.downloadFromHere').fadeIn(300);
+                } else {
+                    $('.downloadFromHere').fadeOut(300);
+                }
+
                 return false;
             }
 
+
+
         })
     }
-
-
-
-
-
 
     mainPageClicked = () => {
         $('.itemSearch').removeClass('increment');
@@ -113,10 +125,12 @@ class MainPages extends Component {
         return (
             <main className='elevator'>
 
-                <FirstPage/>
-                <SecondPage/>
-                <ThirdPage/>
-                <FourthPage/>
+                <FirstPage />
+                <SecondPage />
+                <ThirdPage />
+                <FourthPage />
+                <FifthPage />
+                <LastPage />
 
             </main>
         )
