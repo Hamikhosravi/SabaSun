@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import '../../Css/FirstPage.css';
 import firstElevator from "../../Image/firstElevator.png"
 import secondElevator from "../../Image/secondElevator.png"
-
 import $ from "jquery";
 
 export default class FirstPage extends Component {

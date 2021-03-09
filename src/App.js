@@ -47,6 +47,7 @@ export default class App extends Component {
 
     Down = () => {
         $('.wholePages .Page').each(function () {
+
             Index = $(this).index() ;
             floorNumber = Length - Index;
 
@@ -70,7 +71,6 @@ export default class App extends Component {
                 $(this).addClass('heightReductionHalf');
                 $('.leftAside').fadeOut(300);
             }
-
         })
     }
 
@@ -94,12 +94,8 @@ export default class App extends Component {
                 } else {
                     $('.downloadFromHere').fadeOut(300);
                 }
-
                 return false;
             }
-
-
-
         })
     }
 

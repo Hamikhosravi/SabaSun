@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import '../../Css/FifthPage.css';
-// import $ from "jquery";
 import News1 from '../../Image/News1.png';
 import News2 from '../../Image/News2.png';
 import News3 from '../../Image/News3.png';
+// import $ from "jquery";
 
 export default class FifthPage extends Component{
 
