@@ -28,7 +28,6 @@ export default class App extends Component {
     }
 
     Scroll = () => {
-
         if ($(window).scrollTop() === 20) {
             this.Down();
             $('html,body').animate({
