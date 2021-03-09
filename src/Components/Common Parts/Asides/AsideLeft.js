@@ -1,6 +1,6 @@
 import React, {Component} from "react";
-import '../Css/AsideLeft.css'
-import SabaSunApp from '../Image/appSign.png'
+import '../../../Css/AsideLeft.css'
+import SabaSunApp from '../../../Image/appSign.png'
 export default class AsideLeft extends Component{
 
     render(){

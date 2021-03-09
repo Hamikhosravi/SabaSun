@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import '../Css/AsideRight.css'
+import '../../../Css/AsideRight.css'
 import $ from "jquery";
 
 export default class AsideRight extends Component{

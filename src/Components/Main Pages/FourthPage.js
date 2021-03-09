@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import '../Css/FourthPage.css';
+import '../../Css/FourthPage.css';
 // import $ from "jquery";
 
 export default class FourthPage extends Component{

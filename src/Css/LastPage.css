@@ -4,7 +4,6 @@
     height: calc(100vh - 160px);
     display: flex;
     justify-content: center;
-    padding-right: 10%;
     overflow: hidden;
     transition: 0.5s linear;
     background-image: url("../Image/flr1Photo.png");
@@ -12,7 +11,7 @@
     background-size: 100% auto;
     background-repeat: no-repeat;
 }
-.wholeLastPage:before{
+.elevatorLastPage:before{
     content:'';
     position: absolute;
     right:0;
@@ -23,19 +22,21 @@
     transition: 0.5s linear;
 }
 .elevatorLastPage{
+    padding-right: 10%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
-    width: 90%;
+    width: 100%;
     height: 100%;
     max-width: 1600px;
     margin: auto;
     position: relative;
+    transition: 0.5s linear;
 }
 .elevatorLastPage>div{
     padding: 20px 30px;
-    width: 74%;
+    width: 72%;
     height: 77%;
     /*border:1px solid green;*/
     display: flex;

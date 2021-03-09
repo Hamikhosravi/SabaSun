@@ -1,9 +1,9 @@
 import React, {Component} from "react";
-import logo1 from "../Image/Logo.png";
+import logo1 from "../../Image/Logo.png";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faSearch, faUser} from "@fortawesome/free-solid-svg-icons";
 import $ from "jquery";
-import  '../Css/Header.css';
+import  '../../Css/Header.css';
 
 
 export default class Header extends Component{

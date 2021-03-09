@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import '../Css/AsideFloorNumber.css'
+import '../../../Css/AsideFloorNumber.css'
 
 export default class AsideFloorNumber extends Component{
 

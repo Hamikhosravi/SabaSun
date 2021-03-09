@@ -1,6 +1,6 @@
 import React, {Component} from "react";
-import '../Css/Footer.css';
-import '../Css/Icomoon.css'
+import '../../Css/Footer.css';
+import '../../Css/Icomoon.css'
 import $ from "jquery";
 
 export default class Footer extends Component {

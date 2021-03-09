@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import '../Css/LastPage.css';
+import '../../Css/LastPage.css';
 // import $ from "jquery";
 
 export default class LastPage extends Component{

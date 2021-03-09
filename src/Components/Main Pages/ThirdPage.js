@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import '../Css/ThirdPage.css';
+import '../../Css/ThirdPage.css';
 import $ from "jquery";
 
 export default class ThirdPage extends Component{

@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import '../Css/SecondPage.css';
+import '../../Css/SecondPage.css';
 import $ from "jquery";
 
 

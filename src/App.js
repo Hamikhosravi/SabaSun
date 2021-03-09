@@ -4,7 +4,8 @@ import './Css/App.css'
 import './Css/Elevator.css'
 import './Css/Responsive global.css';
 import './Css/Responsive.css';
-import {Header, Footer, FirstPage, SecondPage, ThirdPage, FourthPage, FifthPage, LastPage, AsideLeft, AsideRight, AsideFloorNumber} from './Pages'
+import {Header, Footer, Aside} from './Components/Common Parts';
+import MainPages from "./Components/Main Pages/MainPages";
 
 let Index, Length, floorNumber;
 
@@ -53,6 +54,10 @@ export default class App extends Component {
                 $(this).addClass('heightReduction');
                 $(this).next().addClass('backgroundTransparent');
 
+            if ($(this).next().hasClass('lastPage')){
+                $(this).next().children().addClass('backgroundTransparent');
+            }
+
                 if ( $(this).next().hasClass('Applications')) {
                     $('.downloadFromHere').fadeIn(300);
                 } else {
@@ -77,6 +82,7 @@ export default class App extends Component {
 
             if ($(this).hasClass('heightReduction')) {
                 $(this).next().removeClass('backgroundTransparent');
+                $(this).next().children().removeClass('backgroundTransparent');
             }
 
             if ($(this).hasClass('heightReductionHalf') || $(this).hasClass('heightReduction')) {
@@ -102,7 +108,6 @@ export default class App extends Component {
     }
 
     render() {
-        // console.log(this.state.flrNumber)
         return (
             <div className="allPages" onScroll={this.Scroll}>
                 <main className="wholePages" onClick={this.mainPageClicked}>
@@ -119,37 +124,9 @@ export default class App extends Component {
 }
 
 
-class MainPages extends Component {
 
-    render() {
-        return (
-            <main className='elevator'>
 
-                <FirstPage />
-                <SecondPage />
-                <ThirdPage />
-                <FourthPage />
-                <FifthPage />
-                <LastPage />
 
-            </main>
-        )
-    }
-
-}
-
-class Aside extends Component {
-
-    render() {
-        return (
-            <>
-                <AsideFloorNumber floor={this.props.floor}/>
-                <AsideLeft/>
-                <AsideRight pos={this.props.floor} len={this.props.len}/>
-            </>
-        )
-    }
-}
 
 
 
