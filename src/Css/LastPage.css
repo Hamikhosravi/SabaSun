@@ -35,7 +35,7 @@
     transition: 0.5s linear;
 }
 .elevatorLastPage>div{
-    padding: 20px 30px;
+    padding: 20px 90px 20px 30px;
     width: 72%;
     height: 77%;
     /*border:1px solid green;*/
