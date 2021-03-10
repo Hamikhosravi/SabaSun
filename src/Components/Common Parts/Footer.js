@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import '../../Css/Footer.css';
 import '../../Css/Icomoon.css'
-import $ from "jquery";
 
 export default class Footer extends Component {
 
@@ -41,14 +40,14 @@ export default class Footer extends Component {
                         </li>
                         <li className="footerLogos">
                             <ul>
-                                <li><a href="" className="apple"> </a></li>
-                                <li><a href="" className="android"> </a></li>
+                                <li><a href="/" className="apple"> </a></li>
+                                <li><a href="/" className="android"> </a></li>
                                 <li>
                                     <ul className="socials">
-                                        <li className='whatsapp'><a href=""><span className="icon-whatsapp"></span></a></li>
-                                        <li className='telegram'><a href=""><span className="icon-telegram"></span></a></li>
-                                        <li className='instagram'><a href=""><span className="icon-instagram"></span></a></li>
-                                        <li className='facebook'><a href=""><span className="icon-facebook2"></span></a></li>
+                                        <li className='whatsapp'><a href="/"><span className="icon-whatsapp"> </span></a></li>
+                                        <li className='telegram'><a href="/"><span className="icon-telegram"> </span></a></li>
+                                        <li className='instagram'><a href="/"><span className="icon-instagram"> </span></a></li>
+                                        <li className='facebook'><a href="/>"><span className="icon-facebook2"> </span></a></li>
                                     </ul>
                                 </li>
                             </ul>
