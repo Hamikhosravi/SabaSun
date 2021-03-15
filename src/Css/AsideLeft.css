@@ -1,9 +1,10 @@
 .leftAside {
     position: fixed;
     left: 5%;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     width: 40px;
-    height: 100%;
+    /*height: 100%;*/
     z-index: 200;
 }
 
@@ -69,6 +70,7 @@
 .leftAside > aside>.downloadFromHere{
     position: fixed;;
     left: calc(5% + 50px);
-    top: 15%;
+    width: 200px;
+    top:-170px;
     display: none;
 }
